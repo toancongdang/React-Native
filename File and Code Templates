@@ -1,0 +1,110 @@
+/**
+ * Created by SAMSET on ${DATE}.
+ */
+
+'use strict';
+var React = require('react');
+var ReactNative = require('react-native');
+
+var StyleSheet = require('StyleSheet');
+var PropTypes = require('ReactPropTypes');
+var Dimensions = require('Dimensions');
+
+var {
+    Alert,
+    Image,
+    Text,
+    AlertIOS,
+    Platform,
+    TouchableOpacity,
+    ListView,
+    View
+} = ReactNative;
+
+const TAG = "[Momo-v2] $MyComponent : ";
+const widthScreen = Dimensions.get('window').width;
+const heightScreen = Dimensions.get('window').height - ((Platform.OS === 'ios') ? 18 : 42);
+
+
+var $MyComponent = React.createClass({
+  propTypes: {
+    ...View.propTypes,
+  },
+
+  getDefaultProps: function() {
+    return {
+
+    }
+  },
+  
+  getInitialState : function(){
+    console.log(TAG + "START ............");
+    return {
+      
+    };
+  },
+
+  // componentWillMount() -> render() -> componentDidMount()
+  componentWillMount() {
+    
+  },
+  
+  // componentWillMount() -> render() -> componentDidMount()
+  componentDidMount() {
+    
+  },
+  
+  // When component is unmount, clear timer if has using
+  componentWillUnmount() {
+    
+  },
+  
+  // When props changed
+  componentWillReceiveProps(nextProps) {
+    
+  },
+  
+  // When state and props changed
+  shouldComponentUpdate(nextProps, nextState) {
+        return true; //default
+  },
+  
+  // If shouldComponentUpdate return true
+  componentWillUpdate(nextProps, nextState) {
+
+  },
+  
+  // After component re-render , từ hậu quả của componentWillUpdate
+  componentDidUpdate(prevProps, prevState) {
+    
+  },
+  
+  // componentWillMount() -> render() -> componentDidMount()
+  render(){
+    return (
+      <View>
+        <Text>$Content</Text>
+      </View>
+    );
+  }
+  
+});
+
+var styles = StyleSheet.create({
+  container: {
+        flex: 1,
+        paddingBottom:(Platform.OS == "ios") ? 64:0,
+        backgroundColor:'#EDEEEE',
+    },
+    row:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderWidth: 0,
+        paddingVertical: 10
+    },
+    alignRow:{
+        justifyContent: 'space-between'
+    },
+});
+
+module.exports = $MyComponent;
