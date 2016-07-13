@@ -21,7 +21,7 @@ var {
     View
 } = ReactNative;
 
-const TAG = "[Momo-v2] $MyComponent : ";
+const TAG = "[SamSet-v1] $MyComponent : ";
 const widthScreen = Dimensions.get('window').width;
 const heightScreen = Dimensions.get('window').height - ((Platform.OS === 'ios') ? 18 : 42);
 
